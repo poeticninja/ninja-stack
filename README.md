@@ -34,7 +34,7 @@ Start the server by running the command:
 $ node server
 ```
 
-To see you changes you can manually just shutdown and restart the node server. This can be a pain so I use an automatic watcher/node restarter called Supervisor [https://github.com/isaacs/node-supervisor](https://github.com/isaacs/node-supervisor)
+To see any changes you can manually just shutdown and restart the node server. This can be a pain so I use Supervisor to watch for file changes and restart the server [https://github.com/isaacs/node-supervisor](https://github.com/isaacs/node-supervisor).
 
 To install run:
 ```
