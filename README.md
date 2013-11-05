@@ -43,9 +43,9 @@ $ npm install -g supervisor
 
 To use it run:
 ```
-$ supervisor -e html,js  server.js
+$ supervisor -w server -e html,js  server.js
 ```
-Now all of your html and js files are being watched and on change the node server gets restarted automatically.
+Now all of your server html and js files are being watched and on change the node server gets restarted automatically.
 
 ### Folder Structure
 There are two main folders in the stack. The "**public**" folder for front-end (client side) code, and "**server**" folder for server side code.
