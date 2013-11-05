@@ -29,6 +29,24 @@ After Node.js is installed clone this repo. Go into the cloned directory and run
 $ npm install
 ```
 
+Start the server by running the command:
+```
+$ node server
+```
+
+To see any changes you can manually just shutdown and restart the node server. This can be a pain so I use Supervisor to watch for file changes and restart the server [https://github.com/isaacs/node-supervisor](https://github.com/isaacs/node-supervisor).
+
+To install run:
+```
+$ npm install -g supervisor
+```
+
+To use it run:
+```
+$ supervisor -e html,js  server.js
+```
+Now all of your html and js files are being watched and on change the node server gets restarted automatically.
+
 ### Folder Structure
 There are two main folders in the stack. The "**public**" folder for front-end (client side) code, and "**server**" folder for server side code.
 
