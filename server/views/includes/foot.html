@@ -1,0 +1,21 @@
+{# In this section we declare IF 'development' environment. #}
+{% if settings.env == 'development' %}
+	{% block foot %}
+		<script src="bower_components/angular/angular.js"></script>
+		<script src="bower_components/angular-route/angular-route.js"></script>
+		<script src="bower_components/angular-resource/angular-resource.js"></script>
+		<script src="bower_components/angular-animate/angular-animate.js"></script>
+		<script src="js/app.js"></script>
+		<script src="js/services.js"></script>
+		<script src="js/controllers.js"></script>
+		<script src="js/filters.js"></script>
+		<script src="js/directives.js"></script>
+	{% endblock %}
+{% endif %}
+
+{# This block is for 'production' environments other than development. In this section we declare if NOT 'development' environment.#}
+{% if settings.env != 'development' %}
+	{% block foot %}
+		<script src="js/scripts.min.js"></script>
+	{% endblock %}
+{% endif %}

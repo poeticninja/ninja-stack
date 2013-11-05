@@ -3,7 +3,6 @@
 */
 var express = require('express'),
 	config = require('./config'),
-	consolidate = require('consolidate'),
 	swig = require('swig');
 
 module.exports = function(app) {
@@ -12,16 +11,24 @@ module.exports = function(app) {
 	//Prettify HTML
 	app.locals.pretty = true;
 
+	//If the application is started in production or other environments that are not development run this block of code.
+	if(app.settings.env != 'development') {
+		//View templates templates will be cached in production environment.
+		app.set('view cache', true );
+		//Sends compressed version of json,css,html,text in production.
+		app.use(express.compress());
+	}
+
 	//Setting the fav icon and static folder
 	app.use(express.favicon());
 	app.use(express.static(config.root + '/public'));
 
 	app.use(express.logger('dev'));
 
-	//Set views path, template engine and default layout
-	app.set('views', config.root + '/server/views');
+	//Set views path, template engine and default layout.
 	app.set('view engine', 'html');
-	app.engine('html', consolidate.swig);
+	app.engine('html', swig.renderFile);
+	app.set('views', config.root + '/server/views');
 
 
 	//Enable jsonp
@@ -30,6 +37,7 @@ module.exports = function(app) {
 	//bodyParser should be above methodOverride
 	app.use(express.bodyParser());
 	app.use(express.methodOverride());
+
 
 	//routes should be at the last
 	app.use(app.router);

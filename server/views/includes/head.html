@@ -1,0 +1,13 @@
+{# In this section we declare IF 'development'. #}
+{% if settings.env == 'development' %}
+	{% block head %}
+	<link rel="stylesheet" href="css/styles.css"/>
+	{% endblock %}
+{% endif %}
+
+{# In this section we declare if NOT 'development'. #}
+{% if settings.env != 'development' %}
+	{% block head %}
+	<link rel="stylesheet" href="css/styles.min.css"/>
+	{% endblock %}
+{% endif %}
