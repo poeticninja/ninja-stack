@@ -1,6 +1,6 @@
 {
 	"name": "ninja-stack",
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"dependencies": {
 		"angular": "~1.2.0-rc.3",
 		"angular-resource": "v1.2.0-rc.3",
