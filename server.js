@@ -9,7 +9,7 @@ var env = process.env.NODE_ENV = process.env.NODE_ENV || 'development',
 
 var app = express();
 
-//express settings
+//Express setup and settings
 require('./server/config/express')(app);
 
 //Bootstrap routes

@@ -43,7 +43,7 @@ $ npm install -g supervisor
 
 To use it run:
 ```
-$ supervisor -w server -e html,js  server.js
+$ supervisor -e html,js  server
 ```
 Now all of your server html and js files are being watched and on change the node server gets restarted automatically.
 
@@ -55,8 +55,6 @@ By having the front-end folder and server side folder be specific, it provides f
 This project is just getting started and will be moving very fast in a short amount of time.
 
 ### TO DO's
-- Setup Angular Routes/controllers.
-- Setup a couple default pages using angular routes.
 - Go through whole stack and improve code comments.
 
 ### To Do Wish List
