@@ -2,7 +2,7 @@
 
 // Declare app level module which depends on filters, and services
 
-var myApp = angular.module('myApp', ['ngRoute', 'ngResouce', 'ngAnimate']);
+var myApp = angular.module('myApp', ['ngRoute', 'ngResource', 'ngAnimate']);
 
 myApp.config(['$routeProvider', function($routeProvider) {
 	$routeProvider.when('/view1', {templateUrl: 'views/partials/partial1.html', controller: 'MyCtrl1'});
