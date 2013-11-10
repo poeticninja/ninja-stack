@@ -1,11 +1,11 @@
 {
-	"name": "ninja-stack",
-	"version": "0.0.2",
-	"dependencies": {
-		"angular": "~1.2.0-rc.3",
-		"angular-resource": "v1.2.0-rc.3",
-		"angular-route": "v1.2.0-rc.3",
-		"angular-animate": "v1.2.0-rc.3"
-	},
-	"devDependencies": {}
+    "name": "ninja-stack",
+    "version": "0.0.2",
+    "dependencies": {
+        "angular": "~1.2.0",
+        "angular-resource": "~1.2.0",
+        "angular-route": "~1.2.0",
+        "angular-animate": "~1.2.0"
+    },
+    "devDependencies": {}
 }
