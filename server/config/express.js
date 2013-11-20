@@ -24,8 +24,9 @@ module.exports = function(app) {
         app.engine('html', swig.renderFile);
         app.set('views', config.root + '/server/views');
 
-        //bodyParser should be above methodOverride
-        app.use(express.bodyParser());
+        //urlencoded and json should be above methodOverride
+        app.use(express.urlencoded());
+        app.use(express.json());
         app.use(express.methodOverride());
 
         //routes should be at the last

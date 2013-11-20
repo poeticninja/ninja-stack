@@ -1,7 +1,7 @@
 {
 	"name": "ninja-stack",
 	"description": "Boilerplate client and server side stack using Node.js, Express, Swig, AngularJS, and more.",
-	"version": "0.0.2",
+	"version": "0.0.3",
 	"author": "Saul Maddox",
 	"private": false,
 	"repository": {
