@@ -5,6 +5,8 @@ var express = require('express'),
     config = require('./config'),
     swig = require('swig');
 
+swig.setDefaults({ varControls: ['<%=', '%>'] }); // or anything besides ['{{', '}}']
+
 module.exports = function(app) {
 
     // Configure Server
